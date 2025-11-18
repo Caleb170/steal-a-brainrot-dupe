@@ -283,33 +283,4 @@ SafetyToggle.MouseButton1Click:Connect(function()
         if GrokRotDupe.Connections.AntiKick then
             GrokRotDupe.Connections.AntiKick:Disconnect()
         end
-        SafetyToggle.Text = "Anti-Kick [OFF] ⚠️"
-        SafetyToggle.BackgroundColor3 = Color3.fromRGB(70, 40, 40)
-    end
-end)
-
-YPos = YPos + 40
-
-StatusLabel.Parent = MainFrame
-StatusLabel.Size = UDim2.new(1, -20, 0, 25)
-StatusLabel.Position = UDim2.new(0, 10, 0, YPos)
-StatusLabel.BackgroundTransparency = 1
-StatusLabel.Text = "Ready | Buy Basic Pet + Items | Empty Base Slot | 1x/15min"
-StatusLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
-StatusLabel.Font = Enum.Font.Gotham
-StatusLabel.TextSize = 11
-StatusLabel.TextWrapped = true
-StatusLabel.TextXAlignment = Enum.TextXAlignment.Center
-
-SafetyToggle:MouseButton1Click()  -- Auto-ON
-
-Players.PlayerRemoving:Connect(function(p)
-    if p == Player then
-        for _, conn in pairs(GrokRotDupe.Connections) do
-            if conn then conn:Disconnect() end
-        end
-        ScreenGui:Destroy()
-    end
-end)
-
-print("GROKROT DUPE HUB v3.0 LOADED | Rebirth Glitch Auto | Priv Server Sigma")
+        SafetyToggle.Text = "Anti-Kick [
